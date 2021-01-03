@@ -1,0 +1,3 @@
+void stdmsg();
+int encrypt();
+
