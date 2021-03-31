@@ -5,25 +5,11 @@
 #include <stdlib.h>
 
 int encrypt(Encryption *Xor, int *fflag, int *tflag){
-
-  printf("got to the encrypt\n");
-
 char *msg = malloc(5000 * sizeof(char));
 FILE *fpointer = malloc(5000 * sizeof(char));;
 FILE *output = malloc(5000 * sizeof(char));
 
 
-printf("b\n");
-
-fflush(stdout);
-
-//printf("%s\n",(*Xor).filename);
-if(Xor->filename){
-printf("filename =:%s<-\n", Xor->filename);
-fflush(stdout);}
-
-
-//fflush(stdin);
 if(!Xor->filename){
 printf("no input file \n");
 }else{ 
@@ -34,9 +20,6 @@ exit(1);
 printf("file %s opened sucsessfuly\n", Xor->filename);
 };
 
-printf("hello\n");
-fflush(stdout);
-
   if(Xor->fileout){
 printf("save file given\n");
 printf("%s",Xor->fileout);
@@ -46,13 +29,6 @@ exit(1);}
 };
 
 printf("fileout:%s \n",Xor->fileout);
-fflush(stdout);
-
-
-
-
-printf("at for loop\n%s\n",Xor->text);
-fflush(stdout);
 
 if((*Xor).text){
 int i;
@@ -74,7 +50,6 @@ printf("%c", text);
 }else{
 
 
-printf("at while loop\n");
 fflush(stdout);  
 while((fscanf(fpointer, "%c",msg))!=-1){
 char text;
@@ -97,6 +72,4 @@ if((*Xor).fileout != NULL){
 printf("encryption/decryption complete\n");
 
 };
-
-
 
