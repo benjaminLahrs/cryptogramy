@@ -1,49 +1,8 @@
-#include"txtencrypt.h"
-#include"banner.h"
-#include<stdio.h>
-#include"encrypt.h"
-#include<unistd.h>
-#include<stdlib.h>
-#include<string.h>
-
-
-//Encryption Xor = {};
-//Encryption Base64 = {}; 
-//typedef struct{
-//unsigned int onoff:1;
-//const char *text;
-//const char *key;
-//const char *filename;
-//const char *fileout;
-//}Encryption;
- 
-
-
-
-void print_usage(){
-printf("Error, please select either file or text\nusage: -f <file> | -t <\"text\"> \n");
-exit(2);
-};
-
 void print_usage2(){
 printf("Error, please only select one mode of encryption\n -x: Xor | -b: Base64");
 exit(2);
 };
 
-
-
-int main(int argc,char *argv[]){
-Encryption *Xor = NULL;// struct declared locally and malloc'd in switch function
-Encryption *Base64 = NULL; //struct declared locally and malloc'd in switch function
- 
-
-//Xor->onoff = malloc(5* sizeof(int));
-//Xor->onoff = 1;
-//Xor->fileout = malloc(10 * sizeof(char));
-//Xor->filename = NULL;
-//Xor->text = malloc(1000*sizeof(char));
-//Xor->fileout =NULL;
-//Xor->text = NULL;
 printf("\n");
 int xflag = 0;
 int tflag = 0;
