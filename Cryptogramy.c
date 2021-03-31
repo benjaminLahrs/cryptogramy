@@ -1,7 +1,7 @@
 #include"txtencrypt.h"
 #include"banner.h"
 #include<stdio.h>
-//#include"encrypt.h"
+#include"Xor.h"
 #include<unistd.h>
 #include<stdlib.h>
 #include<string.h>
@@ -77,7 +77,6 @@ while((c=getopt(argc, argv,"x b f:t:o:"))!=EOF){
     print_usage2(); 
      }else{
   Xor = malloc(sizeof(Encryption));
-  Xor->onoff = malloc(5* sizeof(int));
   Xor->onoff = 1;
   Xor->fileout = malloc(10 * sizeof(char));
   Xor->text = malloc(1000*sizeof(char)); 
@@ -96,8 +95,7 @@ while((c=getopt(argc, argv,"x b f:t:o:"))!=EOF){
      if(bflag){
     print_usage2();
      }else{
-  Base64 = malloc(sizeof(Encryption));  
-  Base64->onoff = malloc(5* sizeof(int));
+  Base64 = malloc(sizeof(Encryption)); 
   Base64->onoff = 1;
   Base64->fileout = malloc(10 * sizeof(char));
   Base64->text = malloc(1000*sizeof(char));
