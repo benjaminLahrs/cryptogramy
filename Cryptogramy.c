@@ -95,7 +95,7 @@ while((c=getopt(argc, argv,"x b f:t:o:"))!=EOF){
      if(bflag){
     print_usage2();
      }else{
-  Base64 = malloc(sizeof(Encryption)); 
+  Base64 = malloc(sizeof(Encryption));  
   Base64->onoff = 1;
   Base64->fileout = malloc(10 * sizeof(char));
   Base64->text = malloc(1000*sizeof(char));
@@ -187,3 +187,4 @@ if(filename!=NULL)
 {   free(filename);
 }
 }
+
