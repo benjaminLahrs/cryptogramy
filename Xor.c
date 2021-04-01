@@ -17,7 +17,7 @@ printf("no input file \n");
 fprintf(stderr, "Can not open read file: %s\n",(*Xor).filename);
 exit(1);
 }
-printf("file %s opened sucsessfuly\n", Xor->filename);
+printf("file: %s opened sucsessfuly\n\n", Xor->filename);
 };
 
   if(Xor->fileout){
@@ -28,7 +28,7 @@ fprintf(stderr, "Can not open write file1: %s\n",(*Xor).fileout);
 exit(1);}
 };
 
-printf("fileout:%s \n",Xor->fileout);
+//printf("fileout:%s \n",Xor->fileout);
 
 if((*Xor).text){
 int i;
@@ -67,9 +67,10 @@ printf("\n\nFile in:  %s\n",((*Xor).filename));
 if((*Xor).fileout != NULL){
   printf("File out: %s\n", (*Xor).fileout);
   }else{
-  printf("File out: output.txt\n");}
+  printf("File out: output.txt (default if none selected)\n");}
 
 printf("encryption/decryption complete\n");
 
 };
+
 
